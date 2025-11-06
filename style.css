@@ -190,7 +190,11 @@ img{
         grid-template-areas: 
         "a7 a1 a1 a4"
         "a7 a1 a1 a4"
+        "a7 a1 a1 a4"
+        "a7 a1 a1 a4"
         "a8 a2 a3 a4"
+        "a8 a2 a3 a4"
+        "a8 a6 a5 a5"
         "a8 a6 a5 a5"
         ;
     }
