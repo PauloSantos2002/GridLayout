@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+:root{
+    --Purple100: hsl(254, 88%, 90%);
+    --Purple500: hsl(256, 67%, 59%);
+
+    --Yellow100: hsl(31, 66%, 93%);
+    --Yellow500: hsl(39, 100%, 71%);
+
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+
+    --font:  "DM Sans", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+body{
+    margin: auto;
+    background-color: ghostwhite;
+}
+main{
+    height: 100dvh;
+    width: 90dvw;
+    max-width: 400px;
+    margin-top: 35px;
+    display: grid; 
+    gap: 20px;
+}
+img{
+    width: 10rem;
+    display: block;
+}
+/* ======================= fiveStars ========================== */
+.fiveStars{
+    background-color: var(--Purple500);
+    color: var(--White);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+.fiveStars .title{
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 40px;
+}
+.fiveStars p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+.fiveStars img{
+    margin: auto;
+    width: 11rem;
+    margin-top: 15px;
+}
+/* ======================= multiPlataform ========================== */
+.multiPlataform{
+    background-color: var(--White);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 20px;
+}
+.multiPlataform img{
+    width: 100%;
+}
+
+/* ====================== calendar =========================== */
+.calendar{
+    background-color: var(--Yellow500);
+    padding: 20px 10px 0 15px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 20px;
+}
+.calendar img{
+    width: 70%;
+    margin-bottom: -2px;
+    margin-top: 20px;
+}
+
+/* ====================== socialMedia =========================== */
+.socialMedia{
+    background-color: var(--Purple100);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+
+}
+.socialMedia .title{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.socialMedia p{
+    line-height: 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 10px 5px;
+}
+.socialMedia img{
+    width: 100%;
+    margin: 10px 0px;
+}
+/* ====================== growFollowers =========================== */
+.growFollowers{
+    background-color: var(--Purple500);
+    text-align: center;
+    border-radius: 10px;
+    color: var(--White);
+    padding: 20px;
+}
+.growFollowers p{
+    font-size: 2rem;
+    line-height: 30px;
+    width: 70%;
+    margin: auto;
+}
+.growFollowers img{
+    width: 75%;
+    margin-bottom: 30px;
+}
+
+/* ================================ audienceGrowth ================================== */
+.audienceGrowth{
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 20px;
+}
+.audienceGrowth .title{
+    font-size: 3rem;
+    font-weight: 500;
+}
+.audienceGrowth .paragraf{
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* ============================== createPost ========================================= */
+.createPost{
+    background-color: var(--Yellow100);
+    padding: 30px;
+    border-radius: 10px;
+    
+}
+.createPost p{
+    font-size: 2rem;
+    line-height: 25px;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+.createPost span{
+    color: var(--Purple500);
+}
+.createPost img{
+    width: 65%;
+}
+/* ======================== ai ============================ */
+.aiWrite{
+    background-color: var(--Yellow500);
+    padding: 30px;
+    border-radius: 10px;
+}
+.aiWrite p{
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 30px;
+    
+}
+.aiWrite img{
+    width: 80%;
+    margin: 20px 0px 0px 0px;
+}
+
+@media (min-width: 600px) {
+    body{
+        height: 95dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main{
+        width: 95dvh;
+        grid-template-areas: 
+        "a7 a1 a1 a4"
+        "a7 a1 a1 a4"
+        "a8 a2 a3 a4"
+        "a8 a6 a5 a5"
+        ;
+    }
+    .fiveStars{
+        grid-area: a1;
+    }
+    .multiPlataform{
+        grid-area: a2;
+
+    }
+    .calendar{
+        grid-area: a3;
+    }
+    .socialMedia{
+        grid-area: a4;
+    }
+    .growFollowers{
+        grid-area: a5;
+    }
+    .audienceGrowth{
+        grid-area: a6; 
+    }
+    .createPost{
+        grid-area: a7
+    }
+    .aiWrite{
+        grid-area: a8;
+    }
+}
