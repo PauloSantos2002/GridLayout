@@ -1,226 +1,218 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap');
+
+/* ======================= VARIABLES ======================= */
 :root{
     --Purple100: hsl(254, 88%, 90%);
-    --Purple500: hsl(256, 67%, 59%);
+    --Purple500: hsl(256, 67%, 55%);
 
     --Yellow100: hsl(31, 66%, 93%);
     --Yellow500: hsl(39, 100%, 71%);
 
     --White: hsl(0, 0%, 100%);
-    --Black: hsl(0, 0%, 7%);
 
-    --font:  "DM Sans", sans-serif;
+    --font: "DM Sans", sans-serif;
+
+    /* Fontes reduzidas */
+    --fs-xxl: 2.2rem;
+    --fs-xl: 2rem;
+    --fs-lg: 1.4rem;
+    --fs-md: 1.1rem;
+    --fs-sm: 1rem;
 }
 
+/* ======================= RESET ======================= */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font);
 }
+
 body{
-    margin: auto;
+    width: 100%;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
     background-color: ghostwhite;
 }
+
+/* ======================= GRID WRAPPER ======================= */
 main{
-    height: 100dvh;
-    width: 90dvw;
-    max-width: 400px;
-    margin-top: 35px;
-    display: grid; 
-    gap: 20px;
+    width: 90%;
+    display: grid;
+    gap: 14px;
+    grid-auto-rows: minmax(60px, auto); /* ALTURA REDUZIDA */
 }
+
+/* ======================= GLOBAL ELEMENTS ======================= */
 img{
-    width: 10rem;
+    max-width: 100%;
+    height: auto;
     display: block;
+    max-height: 130px; /* ALTURA REDUZIDA */
+    object-fit: contain;
 }
-/* ======================= fiveStars ========================== */
-.fiveStars{
-    background-color: var(--Purple500);
-    color: var(--White);
-    padding: 40px;
+
+/* UTILITÁRIOS */
+.card{
     border-radius: 10px;
+    padding: 10px 15px;  /* PADDING REDUZIDO */
+}
+
+.text-center{
     text-align: center;
+}
+
+/* ======================= COMPONENTES ======================= */
+
+/* fiveStars */
+.fiveStars{
+    background: var(--Purple500);
+    color: var(--White);
+    text-align: center;
+    padding: 25px;
 }
 .fiveStars .title{
-    font-size: 2.6rem;
+    font-size: var(--fs-xl);
     font-weight: 500;
-    line-height: 40px;
+    line-height: 28px;
 }
-.fiveStars p{
-    font-size: 1rem;
-    font-weight: 400;
-}
-.fiveStars img{
-    margin: auto;
-    width: 11rem;
-    margin-top: 15px;
-}
-/* ======================= multiPlataform ========================== */
+
+/* multiPlataform */
 .multiPlataform{
-    background-color: var(--White);
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 1.3rem;
+    background: var(--White);
+    font-size: var(--fs-md);
     font-weight: 500;
-    line-height: 20px;
 }
-.multiPlataform img{
-    width: 100%;
+.multiPlataform p{
+    margin-top: 10px;
+    font-weight: 700;
 }
 
-/* ====================== calendar =========================== */
+/* calendar */
 .calendar{
-    background-color: var(--Yellow500);
-    padding: 20px 10px 0 15px;
-    border-radius: 10px;
-    font-size: 1.5rem;
+    background: var(--Yellow500);
+    font-size: var(--fs-md);
     font-weight: bold;
-    line-height: 20px;
-}
-.calendar img{
-    width: 70%;
-    margin-bottom: -2px;
-    margin-top: 20px;
+    padding: 15px;
 }
 
-/* ====================== socialMedia =========================== */
+/* socialMedia */
 .socialMedia{
-    background-color: var(--Purple100);
+    background: var(--Purple100);
     text-align: center;
-    padding: 20px;
-    border-radius: 10px;
-
 }
 .socialMedia .title{
-    font-size: 1.5rem;
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-size: var(--fs-lg);
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 .socialMedia p{
-    line-height: 20px;
-    font-size: 1.3rem;
+    font-size: var(--fs-sm);
     font-weight: 500;
-    margin: 10px 5px;
-}
-.socialMedia img{
-    width: 100%;
-    margin: 10px 0px;
-}
-/* ====================== growFollowers =========================== */
-.growFollowers{
-    background-color: var(--Purple500);
-    text-align: center;
-    border-radius: 10px;
-    color: var(--White);
-    padding: 20px;
-}
-.growFollowers p{
-    font-size: 2rem;
-    line-height: 30px;
-    width: 70%;
-    margin: auto;
-}
-.growFollowers img{
-    width: 75%;
-    margin-bottom: 30px;
+    margin: 12px 5px;
 }
 
-/* ================================ audienceGrowth ================================== */
+/* growFollowers */
+.growFollowers{
+    background: var(--Purple500);
+    color: var(--White);
+    text-align: center;
+}
+.growFollowers p{
+    font-size: var(--fs-lg);
+    width: 80%;
+    margin: auto;
+}
+
+/* audienceGrowth */
 .audienceGrowth{
-    background-color: var(--White);
-    border-radius: 10px;
-    padding: 20px;
+    background: var(--White);
 }
 .audienceGrowth .title{
-    font-size: 3rem;
+    font-size: var(--fs-xxl);
     font-weight: 500;
 }
 .audienceGrowth .paragraf{
-    font-size: 1.1rem;
-    margin-bottom: 20px;
+    font-size: var(--fs-sm);
     font-weight: 500;
+    margin-bottom: 12px;
 }
 
-/* ============================== createPost ========================================= */
+/* createPost */
 .createPost{
-    background-color: var(--Yellow100);
-    padding: 30px;
-    border-radius: 10px;
-    
+    background: var(--Yellow100);
 }
 .createPost p{
-    font-size: 2rem;
-    line-height: 25px;
-    margin-bottom: 40px;
+    font-size: var(--fs-lg);
     font-weight: 500;
+    margin-bottom: 15px;
 }
 .createPost span{
     color: var(--Purple500);
 }
-.createPost img{
-    width: 65%;
-}
-/* ======================== ai ============================ */
+
+/* aiWrite */
 .aiWrite{
-    background-color: var(--Yellow500);
-    padding: 30px;
-    border-radius: 10px;
+    background: var(--Yellow500);
 }
 .aiWrite p{
-    font-size: 2rem;
+    font-size: var(--fs-lg);
     font-weight: 500;
-    line-height: 30px;
-    
-}
-.aiWrite img{
-    width: 80%;
-    margin: 20px 0px 0px 0px;
 }
 
+/* ======================= GRID DESKTOP ======================= */
 @media (min-width: 600px) {
     body{
-        height: 95dvh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        width: min(1000px, 90%);
+        margin: auto;
     }
+
     main{
-        width: 95dvh;
+        max-width: 80dvw;
+        margin: auto;
         grid-template-areas: 
-        "a7 a1 a1 a4"
-        "a7 a1 a1 a4"
-        "a7 a1 a1 a4"
-        "a7 a1 a1 a4"
-        "a8 a2 a3 a4"
-        "a8 a2 a3 a4"
-        "a8 a6 a5 a5"
-        "a8 a6 a5 a5"
-        ;
+            'a7 a1 a1 a1 a1 a4'
+            'a7 a1 a1 a1 a1 a4'
+            'a7 a2 a2 a3 a3 a4'
+            'a8 a2 a2 a3 a3 a4'
+            'a8 a6 a6 a5 a5 a5'
+            'a8 a6 a6 a5 a5 a5';
     }
-    .fiveStars{
-        grid-area: a1;
+    /* fiveStar desktop */
+    .fiveStars{ 
+        grid-area: a1; 
+        padding: 2.5rem;
     }
-    .multiPlataform{
-        grid-area: a2;
+    .fiveStars .title{
+        font-size: 3rem;
+        line-height: 1em;
+    }
+    .fiveStars img{
+        margin: 20px auto;
+        width: 60%;
 
     }
-    .calendar{
+    .multiPlataform{ 
+        grid-area: a2;
+    }
+    .calendar{ 
         grid-area: a3;
-    }
+     }
     .socialMedia{
-        grid-area: a4;
-    }
+         grid-area: a4;
+     }
     .growFollowers{
         grid-area: a5;
-    }
-    .audienceGrowth{
+     }
+    .audienceGrowth{ 
         grid-area: a6; 
     }
-    .createPost{
-        grid-area: a7
+    .createPost{ 
+        grid-area: a7; 
     }
     .aiWrite{
-        grid-area: a8;
-    }
+         grid-area: a8;
+     }
 }
