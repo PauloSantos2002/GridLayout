@@ -78,7 +78,9 @@ img{
     font-weight: 500;
     line-height: 28px;
 }
-
+.fiveStars span{
+    color: var(--Yellow500);
+}
 /* multiPlataform */
 .multiPlataform{
     background: var(--White);
@@ -194,24 +196,56 @@ img{
         width: 60%;
 
     }
+    /* multiPlataform desktop */
     .multiPlataform{ 
         grid-area: a2;
+        font-size: 1.6rem;
+
     }
+
+    /* calendar desktop */
     .calendar{ 
         grid-area: a3;
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding-bottom: 0;
      }
+    .calendar img{
+        width: 80%;
+     }
+
+    /* socialMedia desktop */
     .socialMedia{
          grid-area: a4;
      }
+    .socialMedia .title{
+        text-align: left;
+        line-height: 1.4rem;
+    }
+    .socialMedia img{
+        height: 300px;
+    }
+    .socialMedia p{
+        text-align: left;
+        line-height: 1.4rem;
+    }
+
+    /* growFollowers desktop */
     .growFollowers{
         grid-area: a5;
      }
+
+    /* audienceGrowth desktop */
     .audienceGrowth{ 
         grid-area: a6; 
     }
+
+    /* createPost desktop */
     .createPost{ 
         grid-area: a7; 
     }
+
+    /* aiWrite desktop */
     .aiWrite{
          grid-area: a8;
      }
