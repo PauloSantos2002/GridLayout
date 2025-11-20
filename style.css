@@ -11,13 +11,6 @@
     --White: hsl(0, 0%, 100%);
 
     --font: "DM Sans", sans-serif;
-
-    /* Fontes reduzidas */
-    --fs-xxl: 2.2rem;
-    --fs-xl: 2rem;
-    --fs-lg: 1.4rem;
-    --fs-md: 1.1rem;
-    --fs-sm: 1rem;
 }
 
 /* ======================= RESET ======================= */
@@ -42,16 +35,14 @@ main{
     width: 90%;
     display: grid;
     gap: 14px;
-    grid-auto-rows: minmax(60px, auto); /* ALTURA REDUZIDA */
+    grid-auto-rows: minmax(60px, auto); 
+    grid-auto-columns: minmax(100px, 300px);
 }
 
 /* ======================= GLOBAL ELEMENTS ======================= */
 img{
     max-width: 100%;
-    height: auto;
-    display: block;
-    max-height: 130px; /* ALTURA REDUZIDA */
-    object-fit: contain;
+    max-height: 130px;
 }
 
 /* UTILITÁRIOS */
@@ -74,9 +65,13 @@ img{
     padding: 25px;
 }
 .fiveStars .title{
-    font-size: var(--fs-xl);
+    font-size: 3rem;
     font-weight: 500;
-    line-height: 28px;
+    line-height: 40px;
+}
+.fiveStars img{
+    width: 80%;
+    padding: 15px 0px;
 }
 .fiveStars span{
     color: var(--Yellow500);
@@ -84,38 +79,65 @@ img{
 /* multiPlataform */
 .multiPlataform{
     background: var(--White);
-    font-size: var(--fs-md);
+    font-size: 2.1rem;
     font-weight: 500;
 }
 .multiPlataform p{
+    line-height: 30px;
     margin-top: 10px;
     font-weight: 700;
 }
-
+.imgMultiPlataform{
+    background-image: url(assets/images/illustration-multiple-platforms.webp);
+    width: 100%;
+    height: 90px;
+    /* background-position: top; */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 /* calendar */
 .calendar{
     background: var(--Yellow500);
-    font-size: var(--fs-md);
     font-weight: bold;
-    padding: 15px;
+    padding: 15px 15px 0px 15px;
 }
+.calendar .title{
+    font-size: 1.5rem;
+    line-height: 30px;
 
+    padding-bottom: 20px;
+}
+.imgCalendar{
+    background-image: url(assets/images/illustration-consistent-schedule.webp);
+    width: 200px;
+    height: 130px;
+    background-position: top;
+    background-size: cover;
+}
 /* socialMedia */
 .socialMedia{
     background: var(--Purple100);
     text-align: center;
 }
 .socialMedia .title{
-    font-size: var(--fs-lg);
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 .socialMedia p{
-    font-size: var(--fs-sm);
+    font-size: 1
+    rem;
     font-weight: 500;
-    margin: 12px 5px;
+    margin: 12px 6px;
 }
-
+.imgSocialMedia{
+    margin: auto;
+    background-image: url(assets/images/illustration-schedule-posts.webp);
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 300px;
+    background-size: contain;
+}
 /* growFollowers */
 .growFollowers{
     background: var(--Purple500);
@@ -123,107 +145,171 @@ img{
     text-align: center;
 }
 .growFollowers p{
-    font-size: var(--fs-lg);
-    width: 80%;
-    margin: auto;
+    font-size: 2.5rem;
+    line-height: 35px;
 }
-
+.imgGrowFollowers{
+    background-image: url(assets/images/illustration-grow-followers.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+}
 /* audienceGrowth */
 .audienceGrowth{
     background: var(--White);
 }
 .audienceGrowth .title{
-    font-size: var(--fs-xxl);
+    font-size: 3rem;
     font-weight: 500;
 }
 .audienceGrowth .paragraf{
-    font-size: var(--fs-sm);
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 12px;
 }
-
+.audienceGrowth img{
+    width: 60%;
+}
 /* createPost */
 .createPost{
     background: var(--Yellow100);
 }
 .createPost p{
-    font-size: var(--fs-lg);
+    font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
 .createPost span{
     color: var(--Purple500);
 }
-
+.imgCreatePost{
+    background-image: url(assets/images/illustration-create-post.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 300px;
+    height: 100px;
+}
 /* aiWrite */
 .aiWrite{
     background: var(--Yellow500);
 }
 .aiWrite p{
-    font-size: var(--fs-lg);
+    font-size: 2rem;
+    line-height: 35px;
+    padding-bottom: 25px;
     font-weight: 500;
+}
+.imgAiWrite{
+    background-image: url(assets/images/illustration-ai-content.webp);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 250px;
 }
 
 /* ======================= GRID DESKTOP ======================= */
-@media (min-width: 600px) {
+@media (min-width: 800px) {
     body{
-        width: min(1000px, 90%);
-        margin: auto;
+        width: 100dvw;
     }
 
     main{
-        max-width: 80dvw;
-        margin: auto;
+        
         grid-template-areas: 
-            'a7 a1 a1 a1 a1 a4'
-            'a7 a1 a1 a1 a1 a4'
-            'a7 a2 a2 a3 a3 a4'
-            'a8 a2 a2 a3 a3 a4'
-            'a8 a6 a6 a5 a5 a5'
-            'a8 a6 a6 a5 a5 a5';
+            'a7 a7 a1 a1 a1 a1 a4 a4'
+            'a7 a7 a1 a1 a1 a1 a4 a4'
+            'a7 a7 a2 a2 a3 a3 a4 a4'
+            'a8 a8 a2 a2 a3 a3 a4 a4'
+            'a8 a8 a6 a6 a5 a5 a5 a5'
+            'a8 a8 a6 a6 a5 a5 a5 a5';
+
+        width: 90%;
+        display: grid;
+        gap: 30px;
+        grid-auto-rows: minmax(60px, 180px); 
+        grid-auto-columns: minmax(100px, 180px);
     }
+
+
     /* fiveStar desktop */
     .fiveStars{ 
         grid-area: a1; 
-        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
     }
     .fiveStars .title{
-        font-size: 3rem;
+        font-size: 5rem;
         line-height: 1em;
     }
+    .fiveStars p{
+        font-size: 1.2rem;
+    }
     .fiveStars img{
-        margin: 20px auto;
-        width: 60%;
+        margin: 10px auto;
+        width: 40%;
 
     }
     /* multiPlataform desktop */
     .multiPlataform{ 
         grid-area: a2;
         font-size: 1.6rem;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
     }
-
+    .multiPlataform .title{
+        font-size: 3rem;
+        line-height: 40px;
+        font-weight: 500;
+        
+    }
+    .imgMultiPlataform{
+        width: 350px;
+        height: 120px;
+    }
     /* calendar desktop */
     .calendar{ 
         grid-area: a3;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         font-size: 1.6rem;
         font-weight: 600;
-        padding-bottom: 0;
+        padding: 30px 30px 0px 30px;
      }
-    .calendar img{
-        width: 80%;
+     .calendar .title{
+        font-size: 3rem;
+        line-height: 40px;
+        font-weight: 500;
      }
-
+     .imgCalendar{
+        height: 150px;
+        width: 350px;
+        
+     }
     /* socialMedia desktop */
     .socialMedia{
          grid-area: a4;
+         padding: 50px 0px 50px 40px;
      }
     .socialMedia .title{
+        font-size: 3rem;
         text-align: left;
-        line-height: 1.4rem;
+        line-height: 2.5rem;
     }
-    .socialMedia img{
-        height: 300px;
+    .imgSocialMedia{
+        width: 300px;
+        height: 500px;
+        background-size: cover;
+        margin-right: -2px;
+        margin-bottom: 20px;
     }
     .socialMedia p{
         text-align: left;
